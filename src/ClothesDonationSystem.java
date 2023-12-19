@@ -6,7 +6,6 @@ import java.util.Random;
 /**
  * This class implements the Clothes Donation System.
  * It allows users to donate clothes and view donated clothes and donation organizations.
- * It also allows users to create a new user ID if they are new to the system.
  * <p>
  *     The system stores the data in text files.
  *     The usersList.txt file stores the list of users.
