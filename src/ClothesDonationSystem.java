@@ -29,11 +29,15 @@ public class ClothesDonationSystem {
     private static final String CLOTHES_FILE = "clothesList.txt";
     private static final String DONATION_COMPANIES_FILE = "donationCompaniesList.txt";
 
+    private static final File userFilePath = new File(USERS_FILE);
+    private static final File clothesFilePath = new File(CLOTHES_FILE);
+    private static final File donationCompaniesFilePath = new File(DONATION_COMPANIES_FILE);
+
     private ArrayList<String> usersList;
     private ArrayList<String> clothesList;
     private ArrayList<String> donationCompaniesList;
 
-    Scanner scanner = new Scanner(System.in);
+    public Scanner scanner = new Scanner(System.in);
 
     public ClothesDonationSystem() {
         // Initialize ArrayLists
@@ -41,10 +45,45 @@ public class ClothesDonationSystem {
         clothesList = new ArrayList<>();
         donationCompaniesList = new ArrayList<>();
 
+        // Create files if they don't exist
+        createUsersList();
+        createClothesList();
+        createDonationCompaniesList();
+
         // Load data from files to ArrayLists
         loadUsersData();
         loadClothesData();
         loadDonationCompaniesData();
+    }
+
+    private void createUsersList() {
+        if (!userFilePath.exists()) {
+            try {
+                userFilePath.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void createClothesList() {
+        if (!clothesFilePath.exists()) {
+            try {
+                clothesFilePath.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void createDonationCompaniesList() {
+        if (!donationCompaniesFilePath.exists()) {
+            try {
+                donationCompaniesFilePath.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void loadUsersData() {
