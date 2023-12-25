@@ -23,7 +23,7 @@ Users can view a list of their previous donations, including item details and th
 The system employs a random price generation mechanism for each donated item based on the mentioned quality.
 
 **Error Handling:**
-The system includes error handling an various stages to prevent unexpected issues.
+The system includes error handling at various stages to prevent unexpected issues.
 
 ## Installation Steps ##
 **1. Clone the Repository:**
