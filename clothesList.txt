@@ -1,13 +1,13 @@
 user1, Hoodie, M, High, Female, $40.07
 user1, Trouser, XS, Medium, Unisex, $30.0
-user1, Shirt, XL, Medium, Unisex, $30.02
-user1, Pant, M, Low, Male, $20.07
-user1, Trouser, XL, High, Unisex, $49.0
+user2, Shirt, XL, Medium, Unisex, $30.02
+user2, Pant, M, Low, Male, $20.07
+user2, Trouser, XL, High, Unisex, $49.0
 user1, Trouser, XS, High, Male, $40.65
-user1, Trouser, S, High, Male, $49.52
+user3, Trouser, S, High, Male, $49.52
 user1, Trouser, M, Low, Male, $25.09
 user1, Jacket, L, Medium, Unisex, $38.04
-user1, Pant, XS, High, Male, $42.51
+user3, Pant, XS, High, Male, $42.51
 user1, Jacket, XS, Low, Female, $22.03
 user2, Trouser, L, Medium, Female, $39.11
 user1, Hoodie, XS, Low, Male, $23.53
@@ -15,3 +15,4 @@ user3, Hoodie, L, Medium, Unisex, $32.16
 user3, Trouser, S, High, Male, $49.65
 user2, Shirt, L, Medium, Male, $32.61
 user3, Pant, XL, High, Female, $48.59
+user2, Hoodie, XS, High, Female, $42.73
