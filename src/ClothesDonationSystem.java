@@ -37,9 +37,9 @@ public class ClothesDonationSystem {
     private static final File clothesFilePath = new File(CLOTHES_FILE);
     private static final File donationCompaniesFilePath = new File(DONATION_COMPANIES_FILE);
 
-    private ArrayList<String> usersList;
-    private ArrayList<String> clothesList;
-    private ArrayList<String> donationCompaniesList;
+    private final ArrayList<String> usersList;
+    private final ArrayList<String> clothesList;
+    private final ArrayList<String> donationCompaniesList;
 
     private final Scanner scanner = new Scanner(System.in);
 
@@ -123,7 +123,7 @@ public class ClothesDonationSystem {
         }
     }
 
-    private String username = getUsername();
+    private final String username = getUsername();
 
     private String getUsername() {
         System.out.println("Enter username:");
@@ -163,7 +163,7 @@ public class ClothesDonationSystem {
         System.out.println("4. Search for Previously Donated Items");
         System.out.println("5. Exit the Application");
 
-        int choice = 0;
+        int choice;
 
         try {
             System.out.print("Enter your choice (1-5): ");
@@ -195,7 +195,7 @@ public class ClothesDonationSystem {
         System.out.println("1. Uppers");
         System.out.println("2. Lowers");
 
-        int choice = 0;
+        int choice;
         try {
             System.out.print("Pick a type (1 or 2): ");
             choice = scanner.nextInt();
@@ -221,7 +221,7 @@ public class ClothesDonationSystem {
         System.out.println("2. Hoodies");
         System.out.println("3. Jackets");
 
-        int choice = 0;
+        int choice;
         try {
             System.out.print("Pick a category (1, 2, or 3): ");
             choice = scanner.nextInt();
@@ -273,7 +273,7 @@ public class ClothesDonationSystem {
         System.out.println("1. Pants");
         System.out.println("2. Trousers");
 
-        int choice = 0;
+        int choice;
         try {
             System.out.print("Pick a category (1 or 2): ");
             choice = scanner.nextInt();
@@ -477,7 +477,7 @@ public class ClothesDonationSystem {
         System.out.println("3. Search by Quality");
         System.out.println("4. Go back to Main Menu");
 
-        int choice = 0;
+        int choice;
 
         try {
             System.out.print("Enter your choice (1-4): ");
@@ -684,9 +684,12 @@ public class ClothesDonationSystem {
     private void viewDonationOrganizations() {
         System.out.println("Donation Organizations:");
         System.out.println("1. AkhuwatUK");
-        System.out.println("2. Go back to Main Menu");
+        System.out.println("2. Baitussalam Welfare Trust");
+        System.out.println("3. Penny Appeal");
+        System.out.println("4. Edhi Foundation");
+        System.out.println("5. Go back to Main Menu");
 
-        int choice = 0;
+        int choice;
         String url;
         try {
             System.out.print("Enter your choice (1 or 2): ");
@@ -695,12 +698,22 @@ public class ClothesDonationSystem {
             switch (choice) {
                 case 1 -> {
                     url = donationCompaniesList.get(0);
-                    openURL(url);
+                    openUrlForDonationOrganization(url);
                 }
                 case 2 -> {
-                    displayMainMenu();
+                    url = donationCompaniesList.get(1);
+                    openUrlForDonationOrganization(url);
                 }
-                default -> System.out.println("Invalid choice. Please enter 1 or 2.");
+                case 3 -> {
+                    url = donationCompaniesList.get(2);
+                    openUrlForDonationOrganization(url);
+                }
+                case 4 -> {
+                    url = donationCompaniesList.get(3);
+                    openUrlForDonationOrganization(url);
+                }
+                case 5 -> displayMainMenu();
+                default -> System.out.println("Invalid choice. Please enter a number between 1 and 5.");
             }
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter a valid number.");
@@ -711,7 +724,7 @@ public class ClothesDonationSystem {
         viewDonationOrganizations();
     }
 
-    private void openURL(String url) {
+    private void openUrlForDonationOrganization(String url) {
         try {
             System.out.println("Opening " + url + " in your browser...");
             URI uri = new URI(url);
