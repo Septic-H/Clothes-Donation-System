@@ -16,3 +16,4 @@ user3, Trouser, S, High, Male, $49.65
 user2, Shirt, L, Medium, Male, $32.61
 user3, Pant, XL, High, Female, $48.59
 user2, Hoodie, XS, High, Female, $42.73
+user1, Jacket, XL, Medium, Unisex, $39.07
