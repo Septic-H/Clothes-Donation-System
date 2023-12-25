@@ -38,7 +38,7 @@ The system includes error handling at various stages to prevent unexpected issue
 
     javac ClothesDonationSystem.java
     
-**4. Run the application**
+**4. Run the application:**
 
     java ClothesDonationSystem
 
