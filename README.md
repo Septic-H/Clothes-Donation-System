@@ -12,4 +12,3 @@ The program containts only one class and that class implements the Clothes Donat
 - If the user does not exist, it creates a new user ID for the user.
 - The system also allows users to donate clothes.
 - The system also allows users to view donated clothes and donation organizations.
-- The system also allows users to exit the application.
