@@ -692,7 +692,7 @@ public class ClothesDonationSystem {
         int choice;
         String url;
         try {
-            System.out.print("Enter your choice (1 or 5): ");
+            System.out.print("Enter your choice (1-5): ");
             choice = scanner.nextInt();
 
             switch (choice) {
