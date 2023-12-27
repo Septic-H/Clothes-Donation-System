@@ -14,7 +14,7 @@ Users can donate clothing items by specifying details such as category (upper or
 All clothing donations are stored in a text file (clothesList.txt).
 
 **Search Functionality:**
-Users can search for donated items based on gender, size, and quality.The search results display relevant details about the items.
+Users can search for donated items based on gender, size, and quality. The search results display relevant details about the items.
 
 **Previous Donations Display:**
 Users can view a list of their previous donations, including item details and the total estimated worth of their contributions.
@@ -60,7 +60,7 @@ The system includes error handling at various stages to prevent unexpected issue
 - Users can exit the system when finished.
 
 ## Functionality ##
-The program containts only one class and that class implements the Clothes Donation System.
+The program contains only one class and that class implements the Clothes Donation System.
 - The system stores the data in text files.
 - The usersList.txt file stores the list of users.
 - The clothesList.txt file stores the list of clothes donated by the users.
